@@ -1,0 +1,84 @@
+/* ===================================================
+   Smart Recipe Search — Global Styles
+   Aesthetic: Editorial / Culinary Magazine
+   =================================================== */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Palette */
+  --cream:        #FAF6F0;
+  --warm-white:   #FFFDF9;
+  --ink:          #1A1208;
+  --ink-light:    #3D3020;
+  --brown:        #7C4F2A;
+  --orange:       #E8622A;
+  --orange-light: #F48C60;
+  --sage:         #7A8C6E;
+  --gold:         #C9963A;
+  --border:       #E2D8CC;
+  --border-dark:  #C4B8A8;
+  --surface:      #FFFFFF;
+  --shadow-sm:    0 2px 8px rgba(26,18,8,.07);
+  --shadow-md:    0 6px 24px rgba(26,18,8,.10);
+  --shadow-lg:    0 16px 48px rgba(26,18,8,.14);
+
+  /* Typography */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body:    'DM Sans', system-ui, sans-serif;
+
+  /* Spacing */
+  --max-w: 1200px;
+  --gap: 2rem;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--cream);
+  color: var(--ink);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---- Scrollbar ---- */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--cream); }
+::-webkit-scrollbar-thumb { background: var(--border-dark); border-radius: 3px; }
+
+/* ---- Utility ---- */
+.container {
+  width: 100%;
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+button { cursor: pointer; font-family: var(--font-body); }
+input  { font-family: var(--font-body); }
+
+/* ---- Animations ---- */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+@keyframes shimmer {
+  0%   { background-position: -600px 0; }
+  100% { background-position:  600px 0; }
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.55; }
+}
+
+.fade-up {
+  animation: fadeUp 0.45s ease both;
+}

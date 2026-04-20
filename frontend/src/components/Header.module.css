@@ -1,0 +1,50 @@
+.header {
+  background: var(--warm-white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logoIcon {
+  color: var(--orange);
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.logoText {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.02em;
+}
+
+.tagline {
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: var(--brown);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.stripe {
+  height: 3px;
+  background: linear-gradient(90deg, var(--orange) 0%, var(--gold) 50%, var(--sage) 100%);
+}
