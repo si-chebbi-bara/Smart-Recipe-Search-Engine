@@ -117,6 +117,20 @@
   padding: 1.5rem;
 }
 
+.filterToggle {
+  margin-top: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.86rem;
+  color: var(--ink-light);
+  user-select: none;
+}
+
+.filterToggle input {
+  accent-color: var(--orange);
+}
+
 /* ---- Results ---- */
 .results {
   max-width: var(--max-w);

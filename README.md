@@ -238,3 +238,52 @@ A smart search system that combines:
 
 - Improvements:
   - Larger dataset, query expansion/synonyms, learning-to-rank, feedback loop, offline evaluation metrics.
+
+## Tunisian Food Update
+
+We improved the system to support local Tunisian dishes.
+
+### New Recipes Added
+
+- Couscous
+- Lablabi
+- Ojja with Merguez
+- Brik with Tuna and Egg
+
+Each new recipe includes:
+
+- Name
+- Ingredients
+- Instructions
+
+### Search Support
+
+- Text search now finds Tunisian recipes by name.
+- Ingredient search now works with Tunisian ingredients like harissa and chickpeas.
+- Typo correction also supports local words, for example:
+  - couscouss -> couscous
+
+### UI Update
+
+- Tunisian recipes are shown in cards.
+- Cards include a "Tunisian Food" label.
+- Optional filter added: "Show only Tunisian recipes".
+
+### Why This Matters
+
+- The system is more useful for Tunisian users.
+- It shows that search systems can adapt to local culture and language.
+
+### Teacher Questions (Tunisian Feature)
+
+- Why did you add Tunisian food?
+  - To make the app useful for local users and local dishes.
+
+- How did you update the dataset?
+  - We added new Tunisian recipes with full ingredients and instructions in the backend dataset.
+
+- Does the search work the same way?
+  - Yes. The same TF-IDF, ingredient ranking, and fuzzy correction pipeline is used.
+
+- What challenges did you face with local words?
+  - Some local spellings can vary. We solved this with fuzzy matching and a recipe vocabulary that includes Tunisian terms.

@@ -36,7 +36,7 @@ export default function IngredientInput({ onSearch, isLoading }) {
     }
   }
 
-  const SUGGESTIONS = ['chicken', 'garlic', 'tomatoes', 'pasta', 'eggs', 'cheese', 'onion']
+  const SUGGESTIONS = ['chicken', 'garlic', 'tomatoes', 'pasta', 'eggs', 'cheese', 'onion', 'harissa', 'chickpeas', 'merguez']
 
   return (
     <form className={styles.wrap} onSubmit={handleSubmit}>

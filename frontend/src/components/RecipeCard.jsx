@@ -71,6 +71,9 @@ export default function RecipeCard({ recipe, index, onClick }) {
 
       {/* Body */}
       <div className={styles.body}>
+        {recipe.tags?.includes('Tunisian Food') && (
+          <span className={styles.tunisianLabel}>Tunisian Food</span>
+        )}
         <h3 className={styles.title}>{recipe.title}</h3>
         <p className={styles.desc}>{recipe.description}</p>
 

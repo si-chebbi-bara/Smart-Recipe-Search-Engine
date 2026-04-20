@@ -118,4 +118,52 @@ RECIPES = [
         "image_url": "https://images.unsplash.com/photo-1476124369491-e7addf5db371?w=400",
         "tags": ["Italian", "vegetarian", "rice"],
     },
+    {
+        "id": "13",
+        "title": "Tunisian Couscous",
+        "description": "Steamed couscous with vegetables, chickpeas, and spicy harissa broth.",
+        "ingredients": [
+            "couscous", "chickpeas", "carrots", "zucchini", "potatoes", "onion",
+            "tomato paste", "harissa", "olive oil", "salt", "black pepper"
+        ],
+        "instructions": "Cook onion with olive oil. Add tomato paste, harissa, vegetables, and water. Simmer until soft. Steam couscous and serve with broth and chickpeas.",
+        "image_url": "https://images.unsplash.com/photo-1515516969-d4008cc6241a?w=400",
+        "tags": ["Tunisian Food", "stew", "traditional"],
+    },
+    {
+        "id": "14",
+        "title": "Lablabi",
+        "description": "Warm Tunisian chickpea soup with garlic, cumin, lemon, and crispy bread.",
+        "ingredients": [
+            "chickpeas", "garlic", "cumin", "harissa", "olive oil", "lemon juice",
+            "stale bread", "salt", "black pepper", "parsley"
+        ],
+        "instructions": "Simmer chickpeas with garlic and cumin. Add harissa and season. Put bread in a bowl, pour hot soup over it, then finish with olive oil, lemon, and parsley.",
+        "image_url": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=400",
+        "tags": ["Tunisian Food", "soup", "street food"],
+    },
+    {
+        "id": "15",
+        "title": "Ojja with Merguez",
+        "description": "Spicy tomato and pepper skillet with merguez sausage and poached eggs.",
+        "ingredients": [
+            "merguez", "eggs", "tomatoes", "green peppers", "garlic", "harissa",
+            "olive oil", "caraway", "salt", "black pepper"
+        ],
+        "instructions": "Cook merguez slices. Add peppers, garlic, tomatoes, and harissa. Simmer into a thick sauce. Crack eggs on top and cook until just set.",
+        "image_url": "https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?w=400",
+        "tags": ["Tunisian Food", "eggs", "spicy"],
+    },
+    {
+        "id": "16",
+        "title": "Brik with Tuna and Egg",
+        "description": "Crispy Tunisian pastry filled with tuna, capers, parsley, and a soft egg.",
+        "ingredients": [
+            "brik pastry", "tuna", "eggs", "capers", "parsley", "onion",
+            "harissa", "lemon", "olive oil", "salt", "black pepper"
+        ],
+        "instructions": "Place tuna, capers, parsley, onion, and a whole egg on pastry. Fold and seal. Fry quickly until golden and crisp. Serve with lemon.",
+        "image_url": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400",
+        "tags": ["Tunisian Food", "pastry", "street food"],
+    },
 ]

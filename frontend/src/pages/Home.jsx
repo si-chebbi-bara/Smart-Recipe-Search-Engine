@@ -34,20 +34,25 @@ export default function Home() {
   const [activeTab, setActiveTab] = useState('text')
   const [selectedRecipe, setSelectedRecipe] = useState(null)
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const [showTunisianOnly, setShowTunisianOnly] = useState(false)
   const {
     status, results, total, errorMsg, activeMode,
     isLoading,
     runTextSearch, runIngredientSearch,
   } = useSearch()
 
+  const visibleResults = showTunisianOnly
+    ? results.filter((recipe) => recipe.tags?.includes('Tunisian Food'))
+    : results
+
   useEffect(() => {
     if (!isModalOpen || !selectedRecipe) return
-    const stillVisible = results.some((recipe) => recipe.id === selectedRecipe.id)
+    const stillVisible = visibleResults.some((recipe) => recipe.id === selectedRecipe.id)
     if (!stillVisible) {
       setIsModalOpen(false)
       setSelectedRecipe(null)
     }
-  }, [results, isModalOpen, selectedRecipe])
+  }, [visibleResults, isModalOpen, selectedRecipe])
 
   const openRecipeDetails = (recipe) => {
     setSelectedRecipe(recipe)
@@ -70,8 +75,8 @@ export default function Home() {
           <em>Perfect Recipe</em>
         </h1>
         <p className={styles.heroSub}>
-          AI-powered search combining text retrieval, ingredient matching,
-          and visual similarity — all in one place.
+          Smart search for everyday dishes and Tunisian food.
+          Find recipes by name or ingredients in seconds.
         </p>
       </section>
 
@@ -104,6 +109,15 @@ export default function Home() {
           {activeTab === 'ingredients' && (
             <IngredientInput onSearch={runIngredientSearch} isLoading={isLoading} />
           )}
+
+          <label className={styles.filterToggle}>
+            <input
+              type="checkbox"
+              checked={showTunisianOnly}
+              onChange={(e) => setShowTunisianOnly(e.target.checked)}
+            />
+            <span>Show only Tunisian recipes</span>
+          </label>
         </div>
       </section>
 
@@ -111,8 +125,8 @@ export default function Home() {
       <section className={styles.results}>
         <ResultsGrid
           status={status}
-          results={results}
-          total={total}
+          results={visibleResults}
+          total={showTunisianOnly ? visibleResults.length : total}
           errorMsg={errorMsg}
           activeMode={activeMode}
           onRecipeClick={openRecipeDetails}
@@ -131,7 +145,7 @@ export default function Home() {
           {[
             { icon: '📑', title: 'TF-IDF Ranking', body: 'Term Frequency–Inverse Document Frequency weights rare, informative terms higher than common ones.' },
             { icon: '🔍', title: 'Inverted Index', body: 'Each term maps to all recipes that contain it — enabling sub-millisecond lookups across the corpus.' },
-            { icon: '🖼️', title: 'CNN Visual Search', body: 'MobileNetV2 extracts 1280-dimensional feature embeddings; cosine similarity finds visually alike dishes.' },
+            { icon: '🧠', title: 'Fuzzy Typo Correction', body: 'Misspelled words like "couscouss" can still match "couscous" for better local-language search.' },
           ].map(card => (
             <div key={card.title} className={styles.infoCard}>
               <span className={styles.infoIcon}>{card.icon}</span>

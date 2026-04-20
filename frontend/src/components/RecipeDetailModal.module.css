@@ -68,6 +68,20 @@
   padding: 1.35rem 1.35rem 1.6rem;
 }
 
+.tunisianLabel {
+  display: inline-flex;
+  margin-bottom: 0.55rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #8a3d0d;
+  background: #fdecd9;
+  border: 1px solid #f2c59e;
+  border-radius: 999px;
+  padding: 0.15rem 0.5rem;
+}
+
 .title {
   font-family: var(--font-display);
   font-size: clamp(1.4rem, 2.8vw, 2rem);

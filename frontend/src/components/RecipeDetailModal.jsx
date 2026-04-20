@@ -38,6 +38,9 @@ export default function RecipeDetailModal({ isOpen, recipe, onClose }) {
         </div>
 
         <div className={styles.content}>
+          {recipe.tags?.includes('Tunisian Food') && (
+            <span className={styles.tunisianLabel}>Tunisian Food</span>
+          )}
           <h2 id="recipe-modal-title" className={styles.title}>{recipe.title}</h2>
           <p className={styles.description}>{recipe.description}</p>
 
